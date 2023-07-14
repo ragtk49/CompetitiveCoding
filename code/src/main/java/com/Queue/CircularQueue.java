@@ -20,37 +20,41 @@ public class CircularQueue {
 
     /*
      * The constructor takes in the size of the queue
-     * and initializes the queue with the given size
-     * and sets the front and rear to 0
+     * and initializes the queue, front, rear and size variables
+     * The front is initialized to 0
+     * The rear is initialized to -1
      */
     public CircularQueue(int size){
         queue = new int[size];
-        front  = 0;
-        rear = 0;
+        front  = -1;
+        rear = -1;
         this.size = size;
     }
 
     /*
-     * The enqueue operation takes in an integer
-     * and adds it to the queue
-     * If the queue is full, it returns false
-     * If the queue is not full, it adds the integer
-     * to the queue and returns true
+     * The enQueue() method inserts an element at the rear of the queue if it is not full. 
+     * If the queue is empty before insertion, 
+     * the front index is updated accordingly
+     * If the queue is not full, it adds the element x
+     * to the rear of the queue and returns true
      * The rear is incremented by 1
      */
     public boolean enQueue(int x){
         if(isFull()){
             return false;
         }
-        queue[rear] = x;
+        if(isEmpty()){
+            front = 0;
+        }
         rear = (rear + 1) % size;
+        queue[rear] = x;
         return true;
     }
 
     /*
-     * The dequeue operation removes the element
-     * at the front of the queue
-     * If the queue is empty, it returns false
+     * The deQueue() method removes the front element from the queue if it is not empty. 
+     * If the queue becomes empty after deletion, 
+     * the front and rear indices are reset to -1
      * If the queue is not empty, it removes the element
      * at the front of the queue and returns true
      * The front is incremented by 1
@@ -59,7 +63,11 @@ public class CircularQueue {
         if(isEmpty()){
             return false;
         }
-        front = (front + 1) % size;
+        if (front == rear) {
+            front = -1;
+            rear = -1;
+        }
+        else front = (front + 1) % size;
         return true;
     }
 
@@ -96,7 +104,7 @@ public class CircularQueue {
      * and false if the queue is not empty
      */
     public boolean isEmpty(){
-        return front == rear;
+        return rear == -1;
     }
 
     /*
@@ -104,17 +112,20 @@ public class CircularQueue {
      * and false if the queue is not full
      */
     public boolean isFull(){
-        return (rear + 1) % size == front;
+        return !isEmpty() && (rear + 1) % size == front;
     }
 
     public static void main(String[] args) {
         CircularQueue q = new CircularQueue(3);
-        q.enQueue(1);
-        q.enQueue(2);
-        q.enQueue(3);
-        System.out.println(q.front());
-        q.deQueue();    
-        System.out.println(q.front());
+        System.out.println(q.enQueue(1));
+        System.out.println(q.enQueue(2));
+        System.out.println(q.enQueue(3));
+        System.out.println(q.enQueue(4));
+        System.out.println(q.rear());
+        System.out.println(q.isFull());
+        System.out.println(q.deQueue());    
+        System.out.println(q.enQueue(4));
+        System.out.println(q.rear());
     }
     
 }
