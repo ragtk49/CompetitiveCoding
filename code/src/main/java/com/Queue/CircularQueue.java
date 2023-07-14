@@ -66,8 +66,9 @@ public class CircularQueue {
         if (front == rear) {
             front = -1;
             rear = -1;
+            return true;
         }
-        else front = (front + 1) % size;
+        front = (front + 1) % size;
         return true;
     }
 
@@ -104,7 +105,7 @@ public class CircularQueue {
      * and false if the queue is not empty
      */
     public boolean isEmpty(){
-        return rear == -1;
+        return front == -1;
     }
 
     /*
@@ -112,7 +113,7 @@ public class CircularQueue {
      * and false if the queue is not full
      */
     public boolean isFull(){
-        return !isEmpty() && (rear + 1) % size == front;
+        return (rear + 1) % size == front;
     }
 
     public static void main(String[] args) {
