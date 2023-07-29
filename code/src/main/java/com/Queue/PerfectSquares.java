@@ -38,9 +38,9 @@ public class PerfectSquares {
      */
     public int numSquares(int n) {
         // Create a queue
-        Queue<Integer> queue = new LinkedList<>();
+        Queue<Integer> queue = new LinkedList();
         // Create a visited set
-        Set<Integer> visited = new HashSet<>();
+        Set<Integer> visited = new HashSet();
         // Add the initial state to the queue
         queue.add(n);
         // Add the initial state to the visited set

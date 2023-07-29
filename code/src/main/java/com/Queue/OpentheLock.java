@@ -49,7 +49,7 @@ public class OpentheLock {
 
     public int openLock(String[] deadends, String target){
         // Convert the deadends array into a set
-        Set<String> deadendSet = new HashSet<>();
+        Set<String> deadendSet = new HashSet();
         // Add all the deadends to the set
         for (String deadend : deadends) {
             deadendSet.add(deadend);
@@ -60,9 +60,9 @@ public class OpentheLock {
             return -1; // The initial state is a deadend
         }
         // If the target state is a deadend then return -1
-        Queue<String> queue = new LinkedList<>();
+        Queue<String> queue = new LinkedList();
         // Add the initial state to the queue
-        Set<String> visited = new HashSet<>();
+        Set<String> visited = new HashSet();
         // Add the initial state to the visited set
         queue.offer(start);
         // Add the initial state to the queue
