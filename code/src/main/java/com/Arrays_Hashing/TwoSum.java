@@ -1,19 +1,21 @@
 /*
  * Leetcode 1. Two Sum (https://leetcode.com/problems/two-sum/)
  * Given an array of integers, return indices of the two numbers such that they add up to a specific target.
- * Time Complexity: O(n). We traverse the list containing n elements only once. Each look up in the table costs only O(1) time.
- * Space Complexity: O(n). The extra space required depends on the number of items stored in the hash table, which stores at most n elements.
+ * Example 1:
+ * Input: nums = [2,7,11,15], target = 9
+ * Output: [0,1]
  */
 package com.Arrays_Hashing;
 
 import java.util.HashMap;
-
+/*
+ * Approach: We can solve this problem using Hashing. We can use a HashMap to store the elements of the array.
+ * Then, we can iterate over the array and check if the complement of the current element is present in the HashMap.
+ * If yes, then we can return the indices of the current element and the complement.
+ * If no, then we can add the current element to the HashMap.
+ */
 public class TwoSum {
     /*
-     * We can solve this problem using Hashing. We can use a HashMap to store the elements of the array.
-     * Then, we can iterate over the array and check if the complement of the current element is present in the HashMap.
-     * If yes, then we can return the indices of the current element and the complement.
-     * If no, then we can add the current element to the HashMap.
      * Algorithm:
      * 1. Create a HashMap.
      * 2. Iterate over the array.
@@ -21,8 +23,11 @@ public class TwoSum {
      * 4. If yes, then return the indices of the current element and the complement.
      * 5. If no, then add the current element to the HashMap.
      * 6. Return the result.
-     * Time Complexity: O(n). We traverse the list containing n elements only once. Each look up in the table costs only O(1) time.
-     * Space Complexity: O(n). The extra space required depends on the number of items stored in the hash table, which stores at most n elements.
+     * Time Complexity: O(N), where N is the length of nums. We traverse the array once.
+     * Space Complexity: O(N), where N is the length of nums. We use a hashmap to store the elements of nums.
+     * Note: We can also solve this problem using two pointers. We can sort the array and use two pointers to find the indices of the two numbers.
+     * Time Complexity: O(NlogN), where N is the length of nums. We sort the array and traverse the array once.
+     * Space Complexity: O(1).
      */
     public int[] twoSum(int[] nums, int target){
         if(nums == null || nums.length == 0){

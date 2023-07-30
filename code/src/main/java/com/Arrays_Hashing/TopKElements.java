@@ -9,20 +9,23 @@ package com.Arrays_Hashing;
 
 import java.util.HashMap;
 import java.util.PriorityQueue;
-
+/*
+ * Approach: We can use a min-heap to store the k most frequent elements. We can iterate over the hashmap and add
+ * elements to the min-heap. If the size of the min-heap exceeds k, we remove the top element from the min-heap.
+ */
 public class TopKElements {
     /*
-     * Time Complexity: O(Nlogk), where N is the length of nums. We count the frequency of each number in O(N) time,
-     * then we add N numbers to the heap, each in O(logk) time. Finally, we pop from the heap up to k times.
-     * As k≤N, this is O(Nlogk) in total.
-     * Space Complexity: O(N), the space used to store our count.
-     * Approach: We can use a min-heap to store the k most frequent elements. We can iterate over the hashmap and add
-     * elements to the min-heap. If the size of the min-heap exceeds k, we remove the top element from the min-heap.
      * Algorithm:
      * 1. Create a hashmap to store the frequency of each element.
      * 2. Create a min-heap to store the k most frequent elements.
      * 3. Traverse the hashmap and add elements to the min-heap.
-     * 4. Create the result array and add elements from the min-heap.
+     * 4. If the size of the min-heap exceeds k, then remove the top element from the min-heap.
+     * 5. Create the result array and add elements from the min-heap.
+     * 6. Return the result.
+     * Time Complexity: O(Nlogk), where N is the length of nums. We traverse the hashmap and add elements to the min-heap.
+     * Adding an element to the min-heap takes O(logk) time.
+     * Space Complexity: O(N), where N is the length of nums. We use a hashmap to store the frequency of each element.
+     * We use a min-heap to store the k most frequent elements.
      */
     public int[] topKFrequent(int[] nums, int k){
         // Create a hashmap to store the frequency of each element

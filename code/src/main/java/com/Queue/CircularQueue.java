@@ -1,17 +1,18 @@
 /*
  * LeetCode 622 - Design Circular Queue (https://leetcode.com/problems/design-circular-queue/)
- * This is an implementation of a circular queue using an array
- * 1. The enqueue operation takes O(1) time
- * 2. The dequeue operation takes O(1) time
- * 3. The front operation takes O(1) time
- * 4. The isEmpty operation takes O(1) time
- * 5. The space complexity is O(n)
- * 6. The queue is bounded
- * 7. The queue is circular
+ * Design your implementation of the circular queue. The circular queue is a linear data structure in which the operations are performed based on FIFO (First In First Out) principle
  */
 
 package com.Queue;
-
+/*
+ * Approach: We can use an array to implement a circular queue. We can use two pointers front and rear to keep track of the front and rear of the queue.
+ * The front points to the first element of the queue and the rear points to the last element of the queue.
+ * The front is initialized to -1 and the rear is initialized to -1.
+ * The front is incremented by 1 when an element is removed from the queue.
+ * The rear is incremented by 1 when an element is added to the queue.
+ * The front and rear are reset to -1 when the queue becomes empty.
+ * The front and rear are reset to 0 when the queue becomes full.
+ */
 public class CircularQueue {
 
     private int[] queue;

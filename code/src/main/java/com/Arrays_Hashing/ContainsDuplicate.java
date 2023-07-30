@@ -2,20 +2,21 @@
  * Leetcode 217. Contains Duplicate (https://leetcode.com/problems/contains-duplicate/)
  * Given an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array,
  * and it should return false if every element is distinct.
- * Time Complexity: O(n). We do search() and insert() for n times and each operation takes constant time.
- * Space Complexity: O(n). The space used by a hash table is linear with the number of elements in it.
+ * Example 1:
+ * Input: [1,2,3,1]
+ * Output: true
  */
 
 package com.Arrays_Hashing;
 
 import java.util.HashSet;
 import java.util.Set;
-
+/*
+ * Approach: We can solve this problem using Hashing. We can use a set to add the elements of the array. If the set already contains the element, then we can return true.
+ * If we reach the end of the array, then we can return false.
+ */
 public class ContainsDuplicate {
     /*
-     * We can solve this problem using Hashing. We can use a set to add the elements of the array.
-     * If the set already contains the element, then we can return true. 
-     * If we reach the end of the array, then we can return false.
      * Algorithm:
      * 1. Create a set.
      * 2. Iterate over the array.

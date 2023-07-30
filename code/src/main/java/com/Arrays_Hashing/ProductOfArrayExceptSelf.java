@@ -8,7 +8,12 @@
  * Output: [24,12,8,6]
  */
 package com.Arrays_Hashing;
-
+/*
+ * Approach: We can solve this problem using two arrays leftProduct and rightProduct. We can calculate the product of
+ * all elements to the left of each element and store it in leftProduct array. Similarly, we can calculate the product
+ * of all elements to the right of each element and store it in rightProduct array. Finally, we can calculate the final
+ * result by multiplying leftProduct[i] and rightProduct[i].
+ */
 public class ProductOfArrayExceptSelf {
     /*
      * Algorithm:

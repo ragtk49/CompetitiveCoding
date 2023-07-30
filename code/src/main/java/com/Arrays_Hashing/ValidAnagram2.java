@@ -1,30 +1,27 @@
 /*
  * Leetcode 242. Valid Anagram (https://leetcode.com/problems/valid-anagram/)
  * Given two strings s and t , write a function to determine if t is an anagram of s.
- * Time Complexity: O(n). Time complexity is O(n) because accessing the counter table is a constant time operation.
- * Space Complexity: O(1). Although we do use extra space, the space complexity is O(1) because the table's size stays constant no matter how large n is.
+ * Example 1:
+ * Input: s = "anagram", t = "nagaram"
+ * Output: true
  */
 package com.Arrays_Hashing;
-
+/*
+ * Approach: We can solev this problem by using an array of size 26. We can iterate over the first string and increment
+ * the count of the character at the corresponding index in the array. Similarly, we can iterate over the second string
+ * and decrement the count of the character at the corresponding index in the array. Finally, we can check if all the
+ * values in the array are 0.
+ */
 public class ValidAnagram2 {
     /*
-     * We can solve this problem using Hashing. We can use an array of size 26 to store the characters of the first string.
-     * Then, we can iterate over the second string and check if the character is present in the array.
-     * If yes, then we can decrement the count of the character in the array.
-     * If no, then we can return false.
      * Algorithm:
-     * 1. Check if the lengths of the strings are equal.
-     * 2. If not, then return false.
-     * 3. Create an array of size 26.
-     * 4. Iterate over the first string and compare the character with 'a'.
-     * 5. Increment the count of the character in the array.    
-     * 6. Iterate over the second string and compare the character with 'a'.
-     * 7. Decrement the count of the character in the array.
-     * 8. Iterate over the array and check if all the values are 0.
-     * 9. If yes, then return true.
-     * 10. Else, return false.
-     * Time Complexity: O(n). Time complexity is O(n) because accessing the counter table is a constant time operation.
-     * Space Complexity: O(1). Although we do use extra space, the space complexity is O(1) because the table's size stays constant no matter how large n is.
+     * 1. Create an array of size 26.
+     * 2. Iterate over the first string and increment the count of the character at the corresponding index in the array.
+     * 3. Iterate over the second string and decrement the count of the character at the corresponding index in the array.
+     * 4. Check if all the values in the array are 0.
+     * 5. Return true.
+     * Time Complexity: O(N), where N is the length of s. We traverse the first string once.
+     * Space Complexity: O(1), since the size of the array is fixed.
      */
     public boolean isAnagram(String s, String t){
         int[] arr = new int[26];

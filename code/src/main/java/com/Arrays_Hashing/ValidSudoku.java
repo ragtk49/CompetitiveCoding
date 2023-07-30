@@ -16,23 +16,25 @@
  * Output: true
  */
 package com.Arrays_Hashing;
-
+/*
+ * Approach: We can use three 2D boolean arrays rows, cols, and boxes of size 9 x 9 to keep track of the digits already
+ * present in the corresponding row, column, and sub-box. We can traverse the Sudoku board and check if the current cell
+ * is not empty. If yes, then we check if the digit is already present in the corresponding row, column, or sub-box. If
+ * yes, then we return false. Otherwise, we mark the digit as present in the corresponding row, column, and sub-box. If
+ * the entire board is valid, then we return true.
+ */
 public class ValidSudoku {
     /*
      * Algorithm:
      * 1. Create three 2D boolean arrays rows, cols, and boxes of size 9 x 9.
      * 2. Traverse the Sudoku board.
-     * 3. If the current cell is not empty, then check if the digit is already present in the corresponding row, column,
-     * or sub-box. If yes, then return false.
-     * 4. Otherwise, mark the digit as present in the corresponding row, column, and sub-box.
-     * 5. If the entire board is valid, then return true.
-     * Time Complexity: O(1), since all we do here is just one iteration over the board with 81 cells.
-     * Space Complexity: O(1), since we allocate three 2D arrays of size 9 x 9.
-     * Approach: We can use three 2D boolean arrays rows, cols, and boxes of size 9 x 9 to keep track of the digits
-     * already present in the corresponding row, column, and sub-box. We can traverse the Sudoku board and check if the
-     * current cell is not empty. If yes, then we check if the digit is already present in the corresponding row, column,
-     * or sub-box. If yes, then we return false. Otherwise, we mark the digit as present in the corresponding row,
-     * column, and sub-box. If the entire board is valid, then we return true.
+     * 3. Check if the current cell is not empty.
+     * 4. If yes, then check if the digit is already present in the corresponding row, column, or sub-box.
+     * 5. If yes, then return false.
+     * 6. Otherwise, mark the digit as present in the corresponding row, column, and sub-box.
+     * 7. Return true.
+     * Time Complexity: O(1), since the board size is fixed.
+     * Space Complexity: O(1), since the board size is fixed.
      */
     public boolean isValidSudoku(char[][] board) {
         boolean[][] rows = new boolean[9][9];
