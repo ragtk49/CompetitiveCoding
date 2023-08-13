@@ -7,7 +7,7 @@ Arrays, Two Pointers, Binary Search, Queue, Sliding Window, Stacks
 ## Arrays 
 
 | No. | Questions | 
-| --- | ------------- | 
+| -| ------------- | 
 | 1|[Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|
 | 2|[Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)|
 | 3|[Contains Duplicates](https://leetcode.com/problems/contains-duplicate/)  | 
@@ -25,6 +25,6 @@ Arrays, Two Pointers, Binary Search, Queue, Sliding Window, Stacks
 | 15|[Rotate Array](https://leetcode.com/problems/rotate-array/) |
 | 16|[Top K Elements](https://leetcode.com/problems/top-k-frequent-elements/)  |
 | 17|[Two Sum](https://leetcode.com/problems/two-sum/)  |
-| 18[Valid Anagram](https://leetcode.com/problems/valid-anagram/)  |
+| 18|[Valid Anagram](https://leetcode.com/problems/valid-anagram/)  |
 | 19|[Valid Anagram 2](https://leetcode.com/problems/valid-anagram/)  |
 | 20|[Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)  |
