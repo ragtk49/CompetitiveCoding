@@ -8,6 +8,8 @@ Arrays, Two Pointers, Binary Search, Queue, Sliding Window, Stacks
 
 | Questions | 
 | ------------- | 
+| [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|
+| [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)|
 | [Contains Duplicates](https://leetcode.com/problems/contains-duplicate/)  | 
 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) |
 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | 
