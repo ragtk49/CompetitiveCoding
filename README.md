@@ -13,6 +13,7 @@ Arrays, Two Pointers, Binary Search, Queue, Sliding Window, Stacks
 | [Contains Duplicates](https://leetcode.com/problems/contains-duplicate/)  | 
 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) |
 | [Jump Game ](https://leetcode.com/problems/jump-game/)|
+| [Jump Game II ](https://leetcode.com/problems/jump-game-ii/)|
 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | 
 | [Majority Element](https://leetcode.com/problems/majority-element/?envType=study-plan-v2&envId=top-interview-150)|
 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)  |
