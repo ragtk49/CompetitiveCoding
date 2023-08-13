@@ -12,6 +12,7 @@ Arrays, Two Pointers, Binary Search, Queue, Sliding Window, Stacks
 | [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)|
 | [Contains Duplicates](https://leetcode.com/problems/contains-duplicate/)  | 
 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) |
+| [H-Index ](https://leetcode.com/problems/h-index/)|
 | [Jump Game ](https://leetcode.com/problems/jump-game/)|
 | [Jump Game II ](https://leetcode.com/problems/jump-game-ii/)|
 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | 
